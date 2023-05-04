@@ -1,0 +1,148 @@
+.intro_area{
+  background-image: url(plush.png);
+  background-color: white;
+}
+
+.slider{
+  margin: 0 auto; /* Horizontally centers the slider within its parent element */
+  background: #ecf6f5; /* Sets the background color of the slider */
+  justify-content: center; /* Horizontally centers the slides within the slider */
+  width: 970px; /* Sets the width of the slider to 800 pixels */
+  height: 746px; /* Sets the height of the slider to 500 pixels */
+  border-radius: 10px; /* Adds rounded corners to the slider */
+  overflow: hidden; /* Hides any content that overflows the slider */
+  margin-bottom: 100px
+}
+
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 970px;
+  height: 746px;
+}
+
+
+
+
+
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: 290px;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.manual-btn{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #40D3DC;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+
+
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 790px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.navigation-auto div{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #40D3DC;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #40D3DC;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #40D3DC;
+}
+      
+
+
+@media only screen and (max-width: 767px) {
+  .slider {
+  width: 100%;
+  height: 300px;
+  }
+  
+  .slide img {
+  width: 100%;
+  height: 300px;
+  }
+  
+  .navigation-manual {
+  width: 100%;
+  margin-top: 150px;
+  }
+  
+  .navigation-auto {
+  width: 100%;
+  margin-top: 380px;
+  }
+  }

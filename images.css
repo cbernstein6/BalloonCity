@@ -1,0 +1,39 @@
+/* Desktop styles */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 150px;
+}
+
+.col {
+  flex: 1;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.col img {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.col:hover img {
+  transform: scale(1.05);
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+  .row {
+    padding: 0 20px;
+  }
+  
+  .col {
+    margin: 10px 0;
+  }
+}
